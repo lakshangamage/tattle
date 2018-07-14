@@ -1,10 +1,16 @@
 package com.ceyentra.tattle.adaptor;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -63,11 +69,13 @@ public class NewsFeedRecyclerAdaptor extends RecyclerView.Adapter<NewsFeedRecycl
         TextView txtDescription;
         ImageView imgViewProfilePicture;
         ImageView imgViewFeedImage;
-        ImageView btnLike;
+        CheckBox btnLike;
         ImageView btnShare;
         ArrayList<NewsFeed> newsFeedList = null;
         Context context;
+        ImageView starAnim;
 
+        @SuppressLint("ClickableViewAccessibility")
         public NewsViewHolder(View view, Context context, ArrayList<NewsFeed> newsFeedList) {
             super(view);
             this.context = context;
@@ -82,6 +90,14 @@ public class NewsFeedRecyclerAdaptor extends RecyclerView.Adapter<NewsFeedRecycl
             txtNoOfShares = view.findViewById(R.id.text_share_count);
             txtTime = view.findViewById(R.id.text_time);
             txtDescription = view.findViewById(R.id.text_description);
+            starAnim = (ImageView) itemView.findViewById(R.id.heart_anim);
+            imgViewFeedImage.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+                    return gd.onTouchEvent(event);
+                }
+            });
 
         }
 
@@ -90,5 +106,47 @@ public class NewsFeedRecyclerAdaptor extends RecyclerView.Adapter<NewsFeedRecycl
 
         }
 
+        final GestureDetector gd = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+
+                Animation pulse_fade = AnimationUtils.loadAnimation(context, R.anim.pulse_fade_in);
+                pulse_fade.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+                        starAnim.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        starAnim.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                starAnim.startAnimation(pulse_fade);
+                btnLike.setChecked(true);
+                return true;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+                super.onLongPress(e);
+
+            }
+
+            @Override
+            public boolean onDoubleTapEvent(MotionEvent e) {
+                return true;
+            }
+        });
     }
 }
