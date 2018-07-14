@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/feed_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_profile"
+                app:siBorderWidth="2dp"
+                app:siBorderColor="#bcb3c6" />
+
+
+            <TextView
+                android:id="@+id/text_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profile_icon"
+                android:text="Binura Salindra"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="18sp"
+                android:layout_alignBaseline="@id/profile_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_profile_name"
+                android:layout_toRightOf="@id/profile_icon"
+                android:text="panadura, Sri Lanka"
+                android:textSize="15sp"
+                android:textColor="@color/colorLightGray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+
+                />
+            <ImageView
+                android:id="@+id/feed_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/text_location"
+                android:src="@drawable/ic_profile"/>
+
+            <ImageView
+                android:id="@+id/button_like"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/feed_image"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_like_unfill" />
+
+            <ImageView
+                android:id="@+id/button_comment"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/feed_image"
+                android:layout_toRightOf="@id/button_like"
+                android:src="@drawable/ic_comment" />
+            <TextView
+                android:id="@+id/text_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/button_like"
+                android:layout_marginLeft="10dp"
+                android:text="100,likes"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
