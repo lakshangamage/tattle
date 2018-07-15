@@ -1,6 +1,7 @@
 package com.ceyentra.tattle;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -9,6 +10,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -26,6 +31,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private boolean mLocationPermissionGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private CardView btnNewsFeed;
+    private ImageView btnChats;
+    private ImageView btnGroupchats;
+    private ImageView btnNotification;
 
 
     @Override
@@ -36,6 +45,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        btnChats = findViewById(R.id.btnNewsFeed);
+        btnGroupchats = findViewById(R.id.btnFriends);
+        btnNewsFeed = findViewById(R.id.card_btnNewsFeed);
+        btnNotification = findViewById(R.id.btnNotification);
+
+        btnNewsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MapsActivity.this, MainActivity.class));
+            }
+        });
 
     }
 

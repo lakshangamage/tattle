@@ -46,49 +46,96 @@ public class MainActivity extends AppCompatActivity {
         NewsFeed newsFeed = new NewsFeed();
         newsFeed.setProfileName("Binura Salindra");
         newsFeed.setNoOfLikes(100);
-        newsFeed.setPostLacation("Matara,SriLanka");
-        newsFeed.setNoOfShares(7);
+        newsFeed.setPostLacation("Pettah, Sri Lanka");
+        newsFeed.setNoOfShares(11);
         newsFeed.setPostTime("2 hrs ago");
-        newsFeed.setPostDescription("Random Click by phone");
+        newsFeed.setPostDescription("Respect yourself.\n" +
+                "Respect others.\n" +
+                "Respect your environment.\n" +
+                "Please! Put your litter in the bin.\n");
+        newsFeed.setPostImageUrl(R.drawable.ic_pettah);
+        newsFeed.setProfileImgUrl(R.drawable.ic_binura);
+       // newsFeed.setProfileImgUrl();
 
         NewsFeed newsFeed1 = new NewsFeed();
         newsFeed1.setProfileName("Sandun Dilhan");
-        newsFeed1.setNoOfLikes(1);
-        newsFeed1.setPostLacation("Aluthganma,SriLanka");
+        newsFeed1.setNoOfLikes(17);
+        newsFeed1.setPostLacation("Maradana,Sri Lanka");
         newsFeed1.setNoOfShares(2);
         newsFeed1.setPostTime("8 hrs ago");
-        newsFeed1.setPostDescription("Home");
+        newsFeed1.setPostDescription("Do not throw yourself into Destruction with your own hands.");
+        newsFeed1.setPostImageUrl(R.drawable.ic_maradana);
+        newsFeed1.setProfileImgUrl(R.drawable.ic_sandun);
 
         NewsFeed newsFeed2 = new NewsFeed();
-        newsFeed2.setProfileName("Tharindu Dana");
-        newsFeed2.setNoOfLikes(10);
-        newsFeed2.setPostLacation("Kaluthara,SriLanka");
+        newsFeed2.setProfileName("Tharindu");
+        newsFeed2.setNoOfLikes(170);
+        newsFeed2.setPostLacation("Anuradapura,SriLanka");
         newsFeed2.setNoOfShares(1);
         newsFeed2.setPostTime("4 hrs ago");
-        newsFeed2.setPostDescription("Working");
+        newsFeed2.setPostDescription("Heritage!");
+        newsFeed2.setPostImageUrl(R.drawable.ic_anuradapura);
+        newsFeed2.setProfileImgUrl(R.drawable.ic_tharindu);
 
         NewsFeed newsFeed3 = new NewsFeed();
-        newsFeed3.setProfileName("Sameera Chathurange");
+        newsFeed3.setProfileName("Anonymous");
         newsFeed3.setNoOfLikes(200);
-        newsFeed3.setPostLacation("Galle,SriLanka");
+        newsFeed3.setPostLacation("Kollupitiya,SriLanka");
         newsFeed3.setNoOfShares(9);
         newsFeed3.setPostTime("5 hrs ago");
-        newsFeed3.setPostDescription("Awesome Time");
+        newsFeed3.setPostDescription("A bus stops on a pedestrian crossing to pick up a passenger.");
+        newsFeed3.setPostImageUrl(R.drawable.ic_kollupitiya);
+        newsFeed3.setProfileImgUrl(R.drawable.ic_profile);
 
         NewsFeed newsFeed4 = new NewsFeed();
         newsFeed4.setProfileName("Janitha Danajaya");
         newsFeed4.setNoOfLikes(100);
-        newsFeed4.setPostLacation("Horana,SriLanka");
-        newsFeed4.setNoOfShares(7);
+        newsFeed4.setPostLacation("Colombo Central Bus Stand");
+        newsFeed4.setNoOfShares(19);
         newsFeed4.setPostTime("9 hrs ago");
-        newsFeed4.setPostDescription("Fun Time");
+        newsFeed4.setPostDescription("Had to wait 2 hours in this queue");
+        newsFeed4.setPostImageUrl(R.drawable.ic_colombo);
+        newsFeed4.setProfileImgUrl(R.drawable.ic_janitha);
+
+        NewsFeed newsFeed5 = new NewsFeed();
+        newsFeed5.setProfileName("Anonymous");
+        newsFeed5.setNoOfLikes(122);
+        newsFeed5.setPostLacation("Galle, Sri Lanka");
+        newsFeed5.setNoOfShares(13);
+        newsFeed5.setPostTime("9 hrs ago");
+        newsFeed5.setPostDescription("Chance takers are accident makers");
+        newsFeed5.setPostImageUrl(R.drawable.ic_galle);
+        newsFeed5.setProfileImgUrl(R.drawable.ic_profile);
+
+        NewsFeed newsFeed6 = new NewsFeed();
+        newsFeed6.setProfileName("Sachin Thmalsha");
+        newsFeed6.setNoOfLikes(197);
+        newsFeed6.setPostLacation("Piliyandala, Sri Lanka");
+        newsFeed6.setNoOfShares(10);
+        newsFeed6.setPostTime("9 hrs ago");
+        newsFeed6.setPostDescription("Residents walk along a flooded road in Piliyandala");
+        newsFeed6.setPostImageUrl(R.drawable.ic_galle);
+        newsFeed6.setProfileImgUrl(R.drawable.ic_thamalsha);
+
+        NewsFeed newsFeed7 = new NewsFeed();
+        newsFeed7.setProfileName("Denver");
+        newsFeed7.setNoOfLikes(230);
+        newsFeed7.setPostLacation("Nelum Pokuna Mahinda Rajapaksa Theatre");
+        newsFeed7.setNoOfShares(25);
+        newsFeed7.setPostTime("9 hrs ago");
+        newsFeed7.setPostDescription("Without music, life would be a mistake.");
+        newsFeed7.setPostImageUrl(R.drawable.ic_nelum);
+        newsFeed7.setProfileImgUrl(R.drawable.ic_denver);
 
         newsFeedList = new ArrayList<>();
-        newsFeedList.add(newsFeed);
-        newsFeedList.add(newsFeed1);
-        newsFeedList.add(newsFeed2);
-        newsFeedList.add(newsFeed3);
+        newsFeedList.add(newsFeed7);
+        newsFeedList.add(newsFeed6);
+        newsFeedList.add(newsFeed5);
         newsFeedList.add(newsFeed4);
+        newsFeedList.add(newsFeed3);
+        newsFeedList.add(newsFeed2);
+        newsFeedList.add(newsFeed1);
+        newsFeedList.add(newsFeed);
     }
 
 

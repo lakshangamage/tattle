@@ -3,9 +3,9 @@ package com.ceyentra.tattle.model;
 public class NewsFeed {
     // This class is create temp for testing
     private String profileName;
-    private String profileImgUrl;
+    private int profileImgUrl;
     private String postLacation;
-    private String postImageUrl;
+    private int postImageUrl;
     private String postTime;
     private String postDescription;
     private int noOfLikes;
@@ -17,13 +17,13 @@ public class NewsFeed {
     public NewsFeed() {
     }
 
-    public NewsFeed(String profileName, String profileImgUrl, String postLacation, String postImageUrl, String postTime, int noOfLikes,
-                    int noOfDislikes, int noOfShares) {
+    public NewsFeed(String profileName, int profileImgUrl, String postLacation, int postImageUrl, String postTime, String postDescription, int noOfLikes, int noOfDislikes, int noOfShares) {
         this.profileName = profileName;
         this.profileImgUrl = profileImgUrl;
         this.postLacation = postLacation;
         this.postImageUrl = postImageUrl;
         this.postTime = postTime;
+        this.postDescription = postDescription;
         this.noOfLikes = noOfLikes;
         this.noOfDislikes = noOfDislikes;
         this.noOfShares = noOfShares;
@@ -37,11 +37,11 @@ public class NewsFeed {
         this.profileName = profileName;
     }
 
-    public String getProfileImgUrl() {
+    public int getProfileImgUrl() {
         return profileImgUrl;
     }
 
-    public void setProfileImgUrl(String profileImgUrl) {
+    public void setProfileImgUrl(int profileImgUrl) {
         this.profileImgUrl = profileImgUrl;
     }
 
@@ -53,12 +53,28 @@ public class NewsFeed {
         this.postLacation = postLacation;
     }
 
-    public String getPostImageUrl() {
+    public int getPostImageUrl() {
         return postImageUrl;
     }
 
-    public void setPostImageUrl(String postImageUrl) {
+    public void setPostImageUrl(int postImageUrl) {
         this.postImageUrl = postImageUrl;
+    }
+
+    public String getPostTime() {
+        return postTime;
+    }
+
+    public void setPostTime(String postTime) {
+        this.postTime = postTime;
+    }
+
+    public String getPostDescription() {
+        return postDescription;
+    }
+
+    public void setPostDescription(String postDescription) {
+        this.postDescription = postDescription;
     }
 
     public int getNoOfLikes() {
@@ -77,27 +93,11 @@ public class NewsFeed {
         this.noOfDislikes = noOfDislikes;
     }
 
-    public String getPostTime() {
-        return postTime;
-    }
-
-    public void setPostTime(String postTime) {
-        this.postTime = postTime;
-    }
-
     public int getNoOfShares() {
         return noOfShares;
     }
 
     public void setNoOfShares(int noOfShares) {
         this.noOfShares = noOfShares;
-    }
-
-    public String getPostDescription() {
-        return postDescription;
-    }
-
-    public void setPostDescription(String postDescription) {
-        this.postDescription = postDescription;
     }
 }
