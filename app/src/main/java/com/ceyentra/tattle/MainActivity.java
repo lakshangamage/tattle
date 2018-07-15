@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         newsFeed6.setNoOfShares(10);
         newsFeed6.setPostTime("9 hrs ago");
         newsFeed6.setPostDescription("Residents walk along a flooded road in Piliyandala");
-        newsFeed6.setPostImageUrl(R.drawable.ic_galle);
+        newsFeed6.setPostImageUrl(R.drawable.ic_piliyandala);
         newsFeed6.setProfileImgUrl(R.drawable.ic_thamalsha);
 
         NewsFeed newsFeed7 = new NewsFeed();
