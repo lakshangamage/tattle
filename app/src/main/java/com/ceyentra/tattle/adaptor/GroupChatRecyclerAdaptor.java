@@ -9,12 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.ceyentra.tattle.R;
 import com.ceyentra.tattle.model.ChatMessage;
 import com.ceyentra.tattle.model.User;
 import com.github.siyamed.shapeimageview.CircularImageView;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

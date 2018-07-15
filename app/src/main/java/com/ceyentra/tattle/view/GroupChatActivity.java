@@ -362,10 +362,14 @@ public class GroupChatActivity extends AbstractActivity {
                             message = messageObject.getString("text");
                             createdAt = messageObject.getString("createdAt");
                             avatar = messageObject.getInt("avatar");
-                            messageList.add(new ChatMessage(1,username, message, createdAt, avatar));
+                            int type = 1;
+                            if (username.trim().toLowerCase().equals("anonymous")) type = 3;
+                            else if (username.trim().toLowerCase().equals("admin")) type = 2;
+                            messageList.add(new ChatMessage(type,username, message, createdAt, avatar));
                         }
 
                         configureRecyclerView(messageList);
+                        scrollToBottom();
                     } catch (JSONException e) {
                         return;
                     }
