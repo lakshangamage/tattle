@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void configureRecyclerView(){
 
-        recyclerView = findViewById(R.id.postRecyclerview);
+        recyclerView = (RecyclerView) findViewById(R.id.postRecyclerview);
         newsFeedLayout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true);
         recyclerView.setLayoutManager(newsFeedLayout);
         recyclerAdaptor = new NewsFeedRecyclerAdaptor(newsFeedList,context);

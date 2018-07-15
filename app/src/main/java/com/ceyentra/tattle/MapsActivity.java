@@ -1,6 +1,8 @@
 package com.ceyentra.tattle;
 
 import android.Manifest;
+import android.app.IntentService;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -9,8 +11,12 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.ceyentra.tattle.view.GroupChatActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,6 +33,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean mLocationPermissionGranted = false;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
+    private CardView card_btnNewsFeed;
+    private CardView card_btnProfile;
+    private CardView card_btnFriends;
+    private CardView card_btnNotification;
+    private Button join_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +47,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        card_btnNewsFeed = findViewById(R.id.card_btnNewsFeed);
+        card_btnProfile = findViewById(R.id.card_btnProfile);
+        card_btnFriends = findViewById(R.id.card_btnFriends);
+        card_btnNotification = findViewById(R.id.card_btnNotification);
+        join_btn = findViewById(R.id.join_btn);
+
+        join_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MapsActivity.this, GroupChatActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        card_btnNewsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MapsActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -62,8 +94,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //This is default location --- current location can get from above comment codes
         LatLng colombo = new LatLng(6.918571, 79.862629);
-        mMap.addMarker(new MarkerOptions().position(colombo).title("Dialog Axiata PLC"));
+//        mMap.addMarker(new MarkerOptions().position(colombo).title("Dialog Axiata PLC"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(colombo, 15));
+        mMap.getUiSettings().setAllGesturesEnabled(false);
     }
 
     private void enableMyLocationIfPermitted() {

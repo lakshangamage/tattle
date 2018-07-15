@@ -36,6 +36,7 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    compile 'com.airbnb.android:lottie:2.5.1'
 }
 
 configurations.all {
