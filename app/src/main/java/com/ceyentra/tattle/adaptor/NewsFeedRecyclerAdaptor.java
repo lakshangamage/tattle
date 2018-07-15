@@ -46,6 +46,8 @@ public class NewsFeedRecyclerAdaptor extends RecyclerView.Adapter<NewsFeedRecycl
         holder.txtTime.setText(newsFeed.getPostTime());
         holder.txtNoOfShares.setText(newsFeed.getNoOfShares()+"");
         holder.txtDescription.setText(newsFeed.getPostDescription());
+        holder.imgViewFeedImage.setImageResource(newsFeed.getPostImageUrl());
+        holder.imgViewProfilePicture.setImageResource(newsFeed.getProfileImgUrl());
 
     }
 
