@@ -91,6 +91,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/colorWhite"
+        android:elevation="10dp"
         app:cardCornerRadius="5dp">
 
         <ImageView
@@ -109,6 +110,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
+        android:elevation="10dp"
         android:layout_toRightOf="@id/card_btnNewsFeed"
         app:cardBackgroundColor="@color/colorWhite"
         app:cardCornerRadius="5dp">
@@ -129,6 +131,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
+        android:elevation="10dp"
         android:layout_toRightOf="@id/card_btnProfile"
         app:cardBackgroundColor="@color/colorWhite"
         app:cardCornerRadius="5dp">
@@ -149,6 +152,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
+        android:elevation="10dp"
         android:layout_toRightOf="@id/card_btnFriends"
         app:cardBackgroundColor="@color/colorWhite"
         app:cardCornerRadius="5dp">
