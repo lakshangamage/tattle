@@ -1,4 +1,4 @@
-package com.ceyentra.tattle;
+package com.ceyentra.tattle.view;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +16,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ceyentra.tattle.model.ChatMessage;
+import com.ceyentra.tattle.adaptor.GroupChatRecyclerAdaptor;
+import com.ceyentra.tattle.R;
+import com.ceyentra.tattle.TattleApplication;
+import com.ceyentra.tattle.model.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;

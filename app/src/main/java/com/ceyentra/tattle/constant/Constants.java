@@ -1,4 +1,4 @@
-package com.ceyentra.tattle;
+package com.ceyentra.tattle.constant;
 
 public class Constants {
     public static final String CHAT_SERVER_URL = "http://139.59.26.233:3000/";

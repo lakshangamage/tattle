@@ -1,9 +1,9 @@
-package com.ceyentra.tattle;
+package com.ceyentra.tattle.model;
 
 
 public class ChatMessage {
     int type;
-    int avatar;
+    public int avatar;
     String address;
     String body;
     String date;

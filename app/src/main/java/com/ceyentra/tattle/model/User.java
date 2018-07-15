@@ -1,4 +1,6 @@
-package com.ceyentra.tattle;
+package com.ceyentra.tattle.model;
+
+import com.ceyentra.tattle.R;
 
 import java.util.Random;
 

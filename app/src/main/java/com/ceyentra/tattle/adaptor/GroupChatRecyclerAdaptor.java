@@ -1,4 +1,4 @@
-package com.ceyentra.tattle;
+package com.ceyentra.tattle.adaptor;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ceyentra.tattle.R;
+import com.ceyentra.tattle.model.ChatMessage;
+import com.ceyentra.tattle.model.User;
 import com.github.siyamed.shapeimageview.CircularImageView;
 
 import java.text.SimpleDateFormat;

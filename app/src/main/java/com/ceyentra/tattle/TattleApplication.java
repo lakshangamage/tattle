@@ -2,6 +2,8 @@ package com.ceyentra.tattle;
 
 import android.app.Application;
 
+import com.ceyentra.tattle.constant.Constants;
+
 import java.net.URISyntaxException;
 
 import io.socket.client.IO;
