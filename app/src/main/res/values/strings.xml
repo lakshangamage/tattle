@@ -21,4 +21,5 @@
     <string name="message_user_left">%s left</string>
     <string name="user_action_typing">is typing</string>
 
+    <string name="title_activity_maps">Map</string>
 </resources>

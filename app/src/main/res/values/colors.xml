@@ -37,5 +37,5 @@
     <color name="colorDescGray">#5D5D5D</color>
     <color name="colorLightGreen">#aaf8dc</color>
     <color name="colorAccentSecondary">#F5F5F5</color>
-
+    <color name="colorLightGray">#BDBDBD</color>
 </resources>
